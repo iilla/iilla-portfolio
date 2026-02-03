@@ -16,7 +16,7 @@ The javascript functions control all interactive and visual events, from manual 
 
 ## Installation
 
-Feel free to check the code and use it for personal purposes. 
+Feel free to check the code and use it for personal purposes... after you apply the necessary changes, of course. Just delete any reference that can relate it to myself and it will be allright. You only need to upload these files to your domain, and it will work normally. I've not changed links, nor images, that's up to you! 
     
 ## 🔗 Links
 
