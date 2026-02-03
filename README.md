@@ -7,7 +7,7 @@ This is my personal Portfolio showing some of my most representative jobs. It is
 
 ### Html and Css
 
-This portfolio was made mainly raw html5 and css3 maquetation.
+This portfolio was made mainly with raw html5 maquetation, styled with css3 with hand-made responsive design.
 
 ### Javascript with jQuery
 
