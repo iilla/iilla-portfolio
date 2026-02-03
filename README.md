@@ -21,4 +21,4 @@ Feel free to check the code and use it for personal purposes.
 ## 🔗 Links
 
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://iilla-portfolio.epizy.com)
-
+[![CarouFredSel](https://img.shields.io/badge/github-CarouFredSel-blue?logo=github)](https://github.com/Codeinwp/carouFredSel-jQuery)
