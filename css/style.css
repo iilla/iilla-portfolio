@@ -1,0 +1,499 @@
+
+/*************************************************
+/ **************    FUENTES   ********************
+/*************************************************/
+
+@font-face {
+  font-family: 'alfa_slab';
+  src: url('fonts/alfa_slab/alfa_slab.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'titillium_black';
+  src: url('fonts/titillium_black/titillium_black.woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'titillium_bold';
+  src: url('fonts/titillium_bold/titillium_bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'titillium_light';
+  src: url('fonts/titillium_light/titillium_light.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'titillium_regular';
+  src: url('fonts/titillium_regular/titillium_regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'titillium_thin';
+  src: url('fonts/titillium_thin/titillium_thin.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'ultra';
+  src: url('fonts/ultra/ultra.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'mrseaves_roman';
+  src: url('fonts/mrseaves_roman/mrseaves_roman.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'mrseaves_bold';
+  src: url('fonts/mrseaves_bold/MrsEavesOT-Bold.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'mrseaves_italic';
+  src: url('fonts/mrseaves_italic/MrsEavesOT-Italic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*************************************************
+/ ************    ESTILOS GENERALES  *************
+/*************************************************/
+
+
+body,
+html {
+  height: 100%;
+}
+
+body.slider__body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.slider__container {
+  position: fixed;
+  display: block;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-transition: -webkit-transform 500ms ease-in-out;
+  transition: -webkit-transform 500ms ease-in-out;
+  -o-transition: transform 500ms ease-in-out;
+  transition: transform 500ms ease-in-out;
+}
+
+.slider__page {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.slider__indicators {
+  position: fixed;
+  left: 18px;
+  top: 50%;
+  z-index: 2;
+  margin: 0;
+  padding: 0;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  opacity:0;
+}
+
+.slider__indicator {
+  display: block;
+  width: 10px;
+  height: 10px;
+  margin: 10px 0;
+  border-radius: 100px;
+  background-color: #e60000;
+  cursor: default;
+}
+
+.slider__indicator--active {
+  opacity: 0.3;
+}
+
+/*
+ * HTML5 Boilerplate
+ *
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+html,
+html,
+button,
+input,
+select,
+textarea {
+  color: #222;
+}
+
+html {
+  font-size: 62.5%;
+  line-height: 1.5;
+}
+
+@media (max-width: 480px) {
+  body { font-size: 0.7em; line-height: 1.2; }
+}
+
+/* Landscape phone to portrait tablet */
+@media (min-width: 481px) and (max-width: 767px) {
+  body { font-size: 0.8em; }
+}
+
+@media (min-width: 768px) and (max-width: 979px) {
+  body { font-size: 0.9em; line-height: 1.5;}
+}
+
+@media (min-width: 980px) {
+  body { font-size: 1em; line-height: 1.5;}
+}
+
+/*
+ * Remove the gap between images and the bottom of their containers: h5bp.com/i/440
+ */
+
+img {
+  vertical-align: middle;
+}
+
+/*
+ * Remove default fieldset styles.
+ */
+
+fieldset {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+/*
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea {
+  resize: vertical;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+ol,ul {
+  list-style: none
+}
+
+h1 {
+  margin: 0;
+  font-size: 4.5em;
+  line-height: 0.9em;
+}
+
+h2 {
+  margin: 0;
+  font-size: 1.3em;
+  line-height: 1.3em;
+}
+
+h3 {
+  margin: 0;
+  /*font-weight: bold;*/
+  font-weight: normal;
+  font-size: 1.1em;
+  line-height: 1.1em;
+}
+
+body {
+  /*
+  background: -webkit-linear-gradient(top left,#ffb900, #ff7a00);
+  background: -moz-linear-gradient(top left, #ffb900, #ff7a00);
+  background: -o-linear-gradient(top left, #ffb900, #ff7a00);
+  background: linear-gradient(top left, #ffb900, #ff7a00);
+  */
+  /*background: #c0c0c0;*/
+  background:#6E6E6E1A;
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+/* Prevent callout */
+.nocallout {
+  -webkit-touch-callout: none;
+}
+
+.pressed {
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+/* A hack for HTML5 contenteditable attribute on mobile */
+textarea[contenteditable] {
+  -webkit-appearance: none;
+}
+
+/* A workaround for S60 3.x and 5.0 devices which do not animated gif images if
+   they have been set as display: none */
+.gifhidden {
+  position: absolute;
+  left: -100%;
+}
+
+/*
+ * Image replacement
+ */
+.ir {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: 0;
+  direction: ltr;
+  display: block;
+  overflow: hidden;
+  text-align: left;
+  text-indent: -999em;
+}
+
+.ir br {
+  display: none;
+}
+
+/** Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+
+/** Hide visually and from screenreaders, but maintain layout */
+.invisible {
+  visibility: hidden;
+}
+
+/*** Clearfix helper
+ * Used to contain floats: h5bp.com/q
+*/
+.clearfix:before,
+.clearfix:after {
+  content: "";
+  display: table;
+}
+
+.clearfix:after {
+  clear: both;
+}
+
+.clearfix {
+  font-size:2.5em;
+}
+
+/** For IE 6/7 only
+ * Include this rule to trigger hasLayout and contain floats.
+ */
+.clearfix {
+  *zoom: 1;
+}
+
+.col {
+  z-index:2;
+}
+
+/* ==========================================================================
+   EXAMPLE Media Queries for Responsive Design.
+   Theses examples override the primary ('mobile first') styles.
+   Modify as content requires.
+   ========================================================================== */
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+  /* Style adjustments for viewports that meet the condition */
+}
+
+/****************************************************************/
+/**************Content Styles************************************/
+/****************************************************************/
+
+#leftside-navigator { float:left; }
+#rightside-navigator { float:right; }
+.nav_button {
+  width:5em;
+  height:5em;
+  border-radius:5em;border:1px solid grey;cursor:pointer;
+}
+
+.nav_button:hover {
+  box-shadow:1px 1px 5px grey;
+}
+
+.content_title {
+  font-family:titillium_thin;
+  font-size:4em;
+}
+
+.content_separatorline {
+  margin:1em 0;
+  border-bottom:1px solid grey;
+  width:50%;
+}
+
+.content_explanation {
+  font-family:titillium_regular;
+  font-size:1.75em;
+  width:90%;
+  text-align:justify;
+}
+
+#container-menu span:hover {
+  cursor:pointer;
+  text-decoration:underline;
+  font-style:italic;
+}
+
+.slider_pager a {
+  color:transparent;
+  display:inline;
+  height:5px;
+  width:5px;
+  padding:0 0.4em;
+  margin-left:1em;
+  background-color:transparent;
+  box-shadow:1px 1px 0 #000;
+  border-radius:10px;
+  border:1px solid black;
+}
+
+.slider_pager a.selected {
+  background-color:#000;
+}
+
+.slider img {
+  border:1px solid grey;
+  cursor:pointer;
+}
+
+#main_header img {
+  cursor:pointer;
+  float:left;
+  margin:1.5em;
+}
+
+#main_header img:hover {
+  box-shadow: 1px 1px 5px grey;
+}
+
+#container-content {
+  display:none;
+}
+
+.CFSslider {
+  cursor:pointer;
+}
+
+#main_slider {
+  z-index:1;
+}
+
+#navigation-content {
+  position: absolute;
+  top: 50%;
+  right: 2em;
+  width: 96%;
+  z-index:2
+}
+
+#about_info {
+  z-index:3;
+}
+
+#about_info {
+  margin-left:auto;
+  margin-right:auto;
+  width: 75%;
+  position:relative;
+  opacity:1;
+}
+
+#loadingscr { max-width:100%; }
+#loadingscr img { max-width:75%;margin:5% auto;display:block; } 
+#leftside-navigator img { width: 42%; height: 65%; padding: 20% 0px 0px 23%;z-index:1; }
+#rightside-navigator img { width: 42%; height: 65%; padding: 20% 0 0 32%;z-index:5; }
+
+#main_header {
+  z-index:3;
+  padding:2em 8em 7em 3em;
+  position:relative;
+  margin:0 0 5em 0;
+}
+
+#header_bkg {
+  width:100%;
+  height:8em;
+  background-color:#e60000;
+  position:fixed;
+  top:0;
+  left:0;
+  opacity:0.35;
+  z-index:-1;
+}
+
+#header_txt { 
+  float:right;
+  font-family:titillium_thin;
+  font-size: 3em;
+  padding:0 0 0 5em;
+  text-align:right;
+}
+
+.content_big {
+  margin-left:auto;margin-right:auto;width:75%;
+}
+.content_sml {
+  padding-right:1% !important;
+  margin-left:1% !important;  
+}
+.slider-wraper { padding:0.5em; }
+.container_slider {
+  position:relative;
+} 
+#about_info div {
+  position:relative;
+}
+.bannerText {
+  font-family:titillium_thin;
+  font-size:3em;
+  color:#cbc8c8;
+  position:absolute;
+  top:20%;
+  left:1em;
+  text-align: center;
+  width: 90%;
+}
+
+#landscapeBanner {
+  opacity:0.8;
+  background-color:#000;
+  position:absolute;
+  width: 100%;
+  height: 200%;
+  z-index:6;
+  display:none;
+}

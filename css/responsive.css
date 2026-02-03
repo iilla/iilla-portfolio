@@ -1,0 +1,393 @@
+
+/*************************************************
+/ BASE PARA ENCOLUMNADOS
+/*************************************************/
+
+.col {
+    background: transparent;
+    float: left;
+    margin-left: 2%;
+    margin-bottom: 1.5em;
+}
+.fullwidth .col {
+    float: none;
+    margin-left: 0;
+}
+/* grid5 col */
+.grid5 .col {
+    width: 18.3%;
+}
+/* grid4 col */
+.grid4 .col {
+    width: 23.5%;
+}
+/* grid3 col */
+.grid3 .col {
+    width: 32%;
+}
+/* grid2 col */
+.grid2 .col {
+    width: 49%;
+}
+
+/* fullgrid5 */
+.fullgrid5 .col {
+    width:20%;
+    margin-left: 0;
+}
+/* fullgrid4 */
+.fullgrid4 .col {
+    width:25%;
+    margin-left: 0;
+}
+/* fullgrid3 */
+.fullgrid3 .col {
+    width:33.33%;
+    margin-left: 0;
+}
+/* fullgrid2 */
+.fullgrid2 .col {
+    width:50%;
+    margin-left: 0;
+}
+/* clear col */
+.grid5 .col:nth-of-type(5n+1), .fullgrid5 .col:nth-of-type(5n+1),
+.grid4 .col:nth-of-type(4n+1), .fullgrid4 .col:nth-of-type(4n+1),
+.grid3 .col:nth-of-type(3n+1), .fullgrid3 .col:nth-of-type(3n+1),
+.grid2 .col:nth-of-type(2n+1), .fullgrid2 .col:nth-of-type(2n+1) {
+    margin-left: 0;
+    clear: left;
+}
+
+a {
+    color: #222;
+    text-decoration:none;
+}
+
+/*************************************************
+/ COLUMNAS INDEPENDIENTES  -> MEDIA QUERIES
+/*************************************************/
+/* first column reset  */
+/* 767px / 16px = 47.93em */
+@media screen and (max-width:767px) {
+    /* grid5 -> reset to 4-column */
+    .grid5 .col {
+        width: 23.5%;
+    }
+    .grid5 .col:nth-of-type(5n+1) {
+        margin-left: 1%;
+        clear: none;
+    }
+    .grid5 .col:nth-of-type(4n+1) {
+        margin-left: 0;
+        clear: left;
+    }
+    .fullgrid5 .col {
+        width: 25%;
+    }
+    .fullgrid5 .col:nth-of-type(5n+1) {
+        clear: none;
+    }
+    .fullgrid5 .col:nth-of-type(4n+1) {
+        clear: left;
+    }
+
+    /* grid4 -> reset to 3-column */
+    .grid4 .col {
+        width: 32%;
+    }
+    .grid4 .col:nth-of-type(4n+1) {
+        margin-left: 2%;
+        clear: none;
+    }
+    .grid4 .col:nth-of-type(3n+1) {
+        margin-left: 0;
+        clear: left;
+    }
+    .fullgrid4 .col {
+        width: 33.33%;
+    }
+    .fullgrid4 .col:nth-of-type(4n+1) {
+        clear: none;
+    }
+    .fullgrid4 .col:nth-of-type(3n+1) {
+        clear: left;
+    }
+}
+
+/* second column reset  */
+/* 600px / 16px = 37.5em */
+@media screen and (max-width:767px) {
+    /* grid5 -> reset to 3-column */
+    .grid5 .col {
+        width: 32%;
+    }
+    .grid5 .col:nth-of-type(4n+1) {
+        margin-left: 2%;
+        clear: none;
+    }
+    .grid5 .col:nth-of-type(3n+1) {
+        margin-left: 0;
+        clear: left;
+    }
+    .fullgrid5 .col {
+        width: 33.33%;
+    }
+    .fullgrid5 .col:nth-of-type(4n+1) {
+        clear: none;
+    }
+    .fullgrid5 .col:nth-of-type(3n+1) {
+        clear: left;
+    }
+
+    /* grid4 -> reset to 2-column */
+    .grid4 .col {
+        width: 49%;
+    }
+    .grid4 .col:nth-of-type(3n+1) {
+        margin-left: 2%;
+        clear: none;
+    }
+    .grid4 .col:nth-of-type(2n+1) {
+        margin-left: 0;
+        clear: left;
+    }
+    .fullgrid4 .col {
+        width: 50%;
+    }
+    .fullgrid4 .col:nth-of-type(3n+1) {
+        clear: none;
+    }
+    .fullgrid4 .col:nth-of-type(2n+1) {
+        clear: left;
+    }
+
+    /* grid3 -> reset to 2-column */
+    .grid3 .col {
+        width: 49%;
+    }
+    .grid3 .col:nth-of-type(3n+1) {
+        margin-left: 2%;
+        clear: none;
+    }
+    .grid3 .col:nth-of-type(2n+1) {
+        margin-left: 0;
+        clear: left;
+    }
+    .fullgrid3 .col {
+        width: 50%;
+    }
+    .fullgrid3 .col:nth-of-type(2n+1) {
+        margin-left: 2%;
+        clear: none;
+    }
+    .fullgrid3 .col:nth-of-type(2n+1) {
+        clear: left;
+    }
+}
+
+
+/* Last responsive adaptations (4 sept 2020 - blackwood) */
+/* Last responsive adaptations (19 aprl 2024 - cyberwood) */
+
+/* reset cols to fullwidth */
+/* 480px / 16px = 25em */
+@media screen and (max-width:766px) {
+
+    .slider-wraper {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #main_header {
+        margin: 0 0 1em 0;
+        padding: 2em 5em 6em 3em;
+    }
+    #main_header img { margin: 1em; }
+    #header_txt {
+       padding: 0.3em 0 0 0 !important;
+       font-size: 2em;
+    }
+
+    #leftside-navigator { position:relative;  left:2em }
+    .content_title { font-size: 3em;  text-align: center; }
+    .content_separatorline { margin: 1em auto 1em auto; }
+
+    a { text-decoration:underline; }
+
+    /***************************************/
+
+    .col {
+        width: 98% !important;
+        margin-left: 1% !important;
+        margin-right: 1% !important;
+        clear: none !important;
+    }
+
+    .fullgrid5 .col,
+    .fullgrid4 .col,
+    .fullgrid3 .col,
+    .fullgrid2 .col {
+        width: 100% !important;
+        margin-left: 0% !important;
+        margin-right: 0% !important;
+        clear: none !important;
+    }
+    #pagina { margin-top:0% !important; }
+    .header_menu { display:none !important; }
+}
+/************************************************************************************
+/* 1 TEXTO EN VARIAS COLUMNAS (NO COLUMNAS INDEPENDIENTES)  -> MEDIA QUERIES
+/* EL PRIMER TEXTO LO PONE EN NEGRITA
+/************************************************************************************/
+
+/* Presentamos 2 columnas si son mayores que 400px (si son inferiores se aplica s�lo 1 columna , que es el funcionamiento normal de <p>*/
+/* 400px/16px = 25em */
+/* 979px/16px = 61.18em */
+
+@media all and (min-width:480px) and (max-width:980px) {
+
+    .encolumnado p  {
+        -webkit-column-count: 2; /* Saf3, Chrome*/
+        -webkit-column-gap: 4%; /* Saf3, Chrome*/
+        -moz-column-count: 2; /* FF3.5+ */
+        -moz-column-gap: 4%; /* FF3.5+ */
+        column-count: 2; /* Opera 11+*/
+        column-gap: 4%; /* Opera 11+*/
+    }
+
+}
+
+/* Presentamos 3 columnas */
+/* 980px/16px = 61.25em */
+@media all and (min-width:980px) {
+    .encolumnado p:first-of-type  {
+        -webkit-column-count: 2;
+        -webkit-column-gap: 3%; /* Saf3, Chrome*/
+        -moz-column-count: 2;
+        -moz-column-gap: 3%; /* FF3.5+ */
+        column-count: 2;
+        column-gap: 3%; /* Opera 11+*/
+    }
+    .encolumnado p  {
+        -webkit-column-count: 3;
+        -webkit-column-gap: 1%; /* Saf3, Chrome*/
+        -moz-column-count: 3;
+        -moz-column-gap: 1%; /* FF3.5+ */
+        column-count: 3;
+        column-gap: 1%; /* Opera 11+*/
+    }
+}
+/************************************************************************************
+CONFIGURACION TEXTOS Y CONTENIDOS SENSIBLES AL RESPONSIVE
+*************************************************************************************/
+@media (max-width:480px) {
+    #pagina { margin-top:0% !important; }
+}
+
+@media (min-width:767px) {
+    a:hover {
+        color: #888;
+        text-decoration:underline;
+    }
+}
+
+@media (min-width:481px) {
+    /* Style adjustments for viewports that meet the condition */
+    nav[role="navigation"] { display: none; }
+
+    .header_menu { display:block; }
+    #background_header { display:block; }
+    #bgh_paginador { display:block !important; }
+
+    #motor #motor_texto_principal {width: 55%;}
+    /*.standart_page {margin:11em 0 5em;}*/
+    .cover {margin:10em 0 5em;}
+    #navegacion-bottom {
+        font-size:1em;
+        margin-bottom:0em;
+    }
+    #menu_cabeceras_container {display: block;}
+    .desktop_part {display:block}
+    .smartphone_part {display:none}
+}
+/* Landscape phone to portrait tablet */
+/* 480px / 16px = 30em */
+/* 767px / 16px = 47.93em */
+@media (min-width:480px) and (max-width:767px) { }
+
+/* 768px / 16px = 48em */
+/* 979px / 16px = 61.18em */
+@media (min-width:768px) and (max-width:980px) {
+    #menu_cabeceras_container { display: block; }
+}
+/* 980px / 16px = 61.25em */
+@media (min-width:980px) {
+    #nextImageBtn, #prevImageBtn { display: block; }
+    #menu_cabeceras_container  { display: block; }
+}
+/* 1366px / 16px = 85.38em */
+@media (max-width: 85.38em) {
+    .standart_page {
+        margin:0 auto 5em;
+        width:99%;
+    }
+}
+/************************************************************************************
+*** FIX PARA PANTALLAS HORIZONTALES ESTRECHAS VERTICALMENTE
+*************************************************************************************/
+
+@media (max-width:1440px) and (min-width:768px) and (max-height:480px) and (orientation: landscape) {
+	.content_title {
+	  font-size: 3em;
+	  line-height: 1.1;
+	}
+   .content_explanation {
+		font-size:1.3em;
+		line-height: 1.1;
+	}
+	.caroufredsel_wrapper, .caroufredsel_wrapper img {
+		height:29em !important;
+		width:29em !important;
+	}
+}
+
+@media (max-width:1440px) and (min-width:768px) and (max-height:390px) and (orientation: landscape) {
+	.content_title {
+	  font-size: 2em;
+	  line-height: 1.1;
+	}
+   .content_explanation {
+		font-size:1.2em;
+		line-height: 1.1;
+	}
+	.caroufredsel_wrapper, .caroufredsel_wrapper img {
+		height:29em !important;
+		width:29em !important;
+	}
+}
+
+@media (max-width:1440px) and (min-width:768px) and (max-height:624px) and (min-height:481px)  {
+	.content_title {
+	  font-size: 3em;
+	  line-height: 1.1;
+	}
+   .content_explanation {
+		font-size:1.5em;
+	}
+	.caroufredsel_wrapper, .caroufredsel_wrapper img {
+		height:32em !important;
+		width:32em !important;
+	}
+}
+/************************************************************************************
+*** DESCARTAR DISPOSITIVOS EN ORIENTACIÓN HORIZONTAL EN LOS QUE NO CABE EL CONTENIDO
+*************************************************************************************/
+
+@media (max-width:767px) and (max-height:624px) and (orientation: landscape) {
+    #landscapeBanner { display:block !important; }
+}
+
+
+
